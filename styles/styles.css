@@ -55,6 +55,6 @@
 
     footer {
         margin-top: 20px;
-        border-top: 1px solid black;
+        border-top: 5px double black;
         text-align: center;
     }
