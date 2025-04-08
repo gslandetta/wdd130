@@ -14,7 +14,6 @@
 
 .open-sans-regular {
   font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings:"wdth" 100;
@@ -22,7 +21,6 @@
 
 .open-sans-bold {
   font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-variation-settings:"wdth" 100;
@@ -30,7 +28,6 @@
 
 .open-sans-italic {
   font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: italic;
   font-variation-settings:"wdth" 100;
