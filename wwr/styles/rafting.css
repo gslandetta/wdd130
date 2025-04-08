@@ -16,28 +16,30 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:"wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .open-sans-bold {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-variation-settings:"wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .open-sans-italic {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: italic;
-  font-variation-settings:"wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Bebas Neue", sans-serif;
 }
 
@@ -101,7 +103,7 @@ h1, h2, h3 {
   border-radius: 10px;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.514);
 }
 
@@ -113,7 +115,7 @@ h1, h2, h3 {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero article h2 {
@@ -151,12 +153,12 @@ main h2 {
   margin: 1rem 0;
 }
 
-main > article {
+main>article {
   background-color: white;
   border-left: 6px solid var(--accent1-color);
   padding: 1.5rem;
   margin-top: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   display: flex;
   gap: 1rem;
@@ -164,12 +166,12 @@ main > article {
   flex-wrap: wrap;
 }
 
-main > article img {
+main>article img {
   max-width: 300px;
   border-radius: 10px;
 }
 
-main > article p {
+main>article p {
   background-color: var(--accent1-color);
   padding: 1rem;
   border-radius: 8px;
@@ -194,13 +196,14 @@ section img {
   height: auto;
   margin: 0.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 section img:hover {
   transform: scale(1.05);
 }
+
 .adventure {
   display: flex;
   flex-wrap: wrap;
@@ -213,7 +216,7 @@ section img:hover {
   width: 180px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -231,7 +234,8 @@ section img:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(51, 124, 160, 0.9); /* Primary color with opacity */
+  background-color: rgba(51, 124, 160, 0.9);
+  /* Primary color with opacity */
   color: white;
   text-align: center;
   padding: 0.5rem;
