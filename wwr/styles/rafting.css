@@ -1,0 +1,287 @@
+:root {
+  --primary-color: #337CA0;
+  --secondary-color: #4B5354;
+  --accent1-color: #FDB813;
+  --accent2-color: #7D6533;
+  --background-color: #f4f4f4;
+}
+
+.bebas-neue {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.open-sans-regular {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+.open-sans-bold {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+.open-sans-italic {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings:"wdth" 100;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  color: var(--secondary-color);
+}
+
+.header-image {
+  height: 60px;
+  width: auto;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 100px;
+}
+
+.header nav {
+  flex: 1;
+  text-align: center;
+}
+
+.header nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: white;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: var(--accent1-color);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-size: 6rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.616);
+  padding: 0rem 5rem 0rem 5rem;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.514);
+}
+
+.hero article {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.hero article h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.hero article img {
+  float: right;
+  max-width: 200px;
+  margin-left: 1rem;
+  border-radius: 8px;
+}
+
+.hero article p {
+  color: var(--secondary-color);
+}
+
+main {
+  background-color: var(--background-color);
+  padding: 2rem;
+  color: var(--secondary-color);
+}
+
+main h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+main h2 {
+  font-size: 2rem;
+  color: var(--accent2-color);
+  margin: 1rem 0;
+}
+
+main > article {
+  background-color: white;
+  border-left: 6px solid var(--accent1-color);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main > article img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+main > article p {
+  background-color: var(--accent1-color);
+  padding: 1rem;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  flex: 1;
+}
+
+section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+section img {
+  width: 180px;
+  height: auto;
+  margin: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+section img:hover {
+  transform: scale(1.05);
+}
+.adventure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.adventure-card {
+  position: relative;
+  width: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.adventure-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.adventure-card span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(51, 124, 160, 0.9); /* Primary color with opacity */
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.adventure-card:hover img {
+  transform: scale(1.05);
+}
+
+.adventure-card:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.sociallinks {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.sociallinks a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sociallinks a img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
