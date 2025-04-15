@@ -373,25 +373,24 @@ section h2 {
   transform: translateY(0);
 }
 
-
-footer {
+.footer {
   background-color: var(--primary-color);
   color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   font-family: "Open Sans", sans-serif;
 }
 
-footer p {
-  margin: 0.5rem 0;
+.footer_text p {
+  margin: 0.3rem 0;
   font-size: 1rem;
 }
 
 .social_links {
-  margin-top: 1rem;
   display: flex;
-  justify-content: center;
   gap: 1.5rem;
 }
 
@@ -401,7 +400,7 @@ footer p {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.sociallinks a img:hover {
+.social_links a img:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
 }
