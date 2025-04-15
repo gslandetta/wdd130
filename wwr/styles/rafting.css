@@ -6,35 +6,41 @@
   --background-color: #f4f4f4;
 }
 
-.bebas-neue {
+.bebas_neue {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.open-sans-regular {
+.open_sans_regular {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
 
-.open-sans-bold {
+.open_sans_bold {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
 
-.open-sans-italic {
+.open_sans_italic {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: italic;
   font-variation-settings: "wdth" 100;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1,
@@ -43,39 +49,74 @@ h3 {
   font-family: "Bebas Neue", sans-serif;
 }
 
-.header {
-  display: flex;
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
+  padding: 0.5rem 2rem;
   background-color: var(--primary-color);
-  padding: 1rem 2rem;
-  color: var(--secondary-color);
+  color: white;
 }
 
-.header-image {
-  height: 60px;
+header .logo {
+  height: 100px;
   width: auto;
   background-color: #fff;
   padding: 0.5rem;
   border-radius: 100px;
 }
 
-.header nav {
-  flex: 1;
-  text-align: center;
+header h1 {
+  font-size: 2rem;
+  color: whitesmoke;
+  margin-left: 1rem;
 }
 
-.header nav a {
-  margin: 0 1rem;
+nav {
+  justify-self: end;
+}
+
+.nav_list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav_list li a {
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
   color: white;
-  transition: color 0.3s;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  transition: color 0.3s ease;
+  margin-left: 1rem;
 }
 
-.header nav a:hover {
+.nav_list a:hover {
   color: var(--accent1-color);
+  text-decoration: wavy underline;
+}
+
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  nav {
+    justify-self: center;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+
+
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
 .hero {
@@ -94,12 +135,12 @@ h3 {
 .hero h1 {
   position: absolute;
   top: 20%;
-  left: 50%;
+  left: 0;
+  right: 0;
   font-size: 6rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.616);
-  padding: 0rem 5rem 0rem 5rem;
-  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
   border-radius: 10px;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
@@ -108,10 +149,14 @@ h3 {
 }
 
 .hero article {
+  text-align: justify;
+  align-items: center;
   position: absolute;
   bottom: 5%;
-  left: 5%;
-  right: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 900px;
+  width: 90%;
   background-color: rgba(255, 255, 255, 0.85);
   padding: 1.5rem;
   border-radius: 10px;
@@ -130,9 +175,12 @@ h3 {
   border-radius: 8px;
 }
 
-.hero article p {
+.hero_article p {
   color: var(--secondary-color);
+  text-align: justify;
+  line-height: 1.6;
 }
+
 
 main {
   background-color: var(--background-color);
@@ -181,6 +229,41 @@ main>article p {
   flex: 1;
 }
 
+.history_section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.history_section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.history_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* So it stacks on smaller screens */
+}
+
+.history_content p {
+  flex: 1 1 300px;  /* Allow the paragraphs to shrink and wrap neatly */
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.history_content img.history_stamp {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+
 section {
   margin-top: 3rem;
   text-align: center;
@@ -191,51 +274,86 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-section img {
-  width: 180px;
-  height: auto;
-  margin: 0.5rem;
+.history_stamp {
+  display: block;
+  margin: 0 auto 1rem auto;
+  max-width: 200px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-section img:hover {
-  transform: scale(1.05);
+.history_section {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 1000px;
 }
 
-.adventure {
+.history_section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.history_content {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
+}
+
+.history_content p {
+  flex: 1 1 300px;
+  text-align: justify;
+}
+
+.history_content img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.adventure_section {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.adventure_section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.adventure_gallery {
+  display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.adventure-card {
+.adventure_gallery figure {
   position: relative;
   width: 180px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.adventure-card img {
+.adventure_gallery figure img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
+  border-radius: 0;
   transition: transform 0.3s ease;
 }
 
-.adventure-card span {
+.adventure_gallery figure figcaption {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(51, 124, 160, 0.9);
-  /* Primary color with opacity */
+  background-color: rgba(51, 124, 160, 0.9); /* same as before */
   color: white;
   text-align: center;
   padding: 0.5rem;
@@ -246,14 +364,15 @@ section img:hover {
   transition: all 0.3s ease-in-out;
 }
 
-.adventure-card:hover img {
+.adventure_gallery figure:hover img {
   transform: scale(1.05);
 }
 
-.adventure-card:hover span {
+.adventure_gallery figure:hover figcaption {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 footer {
   background-color: var(--primary-color);
@@ -269,14 +388,14 @@ footer p {
   font-size: 1rem;
 }
 
-.sociallinks {
+.social_links {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 
-.sociallinks a img {
+.social_links a img {
   width: 40px;
   height: 40px;
   transition: transform 0.3s ease, filter 0.3s ease;

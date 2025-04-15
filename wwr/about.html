@@ -15,24 +15,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
-    <header class="header">
-        <img src="images/logo.jpg" alt="Rafting Travel logo" class="header-image">
+    <header>
+        <img src="images/logo.png" alt="Rafting Site Logo" class="logo">
+        <h1>Rafting Travel</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
+            <ul class="nav_list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
+
     <main>
         <div class="hero">
             <img src="images/hero1.jpg" alt="Whitewater rafting adventure">
             <h1>Rafting Travel</h1>
-            <article>
+            <article class="hero_article">
                 <img src="images/rafting1.jpg" alt="Rafting in action">
                 <h2>About Whitewater Rafting</h2>
                 <p>Whitewater rafting is an exhilarating outdoor activity that involves navigating through turbulent
@@ -40,43 +43,56 @@
                     nature, making it a popular choice for thrill-seekers and nature enthusiasts alike.</p>
             </article>
         </div>
-        \<section>
-            <h2>History of Whitewater Rafting</h2>
-            <p>The history of whitewater rafting dates back to the early 19th century when explorers and adventurers
-                began navigating rivers for exploration and transportation. Over the years, it evolved into a popular
-                recreational activity, with the first commercial rafting trips taking place in the 1960s.</p>
+
+        <section class="history_section">
+            <h2>History</h2>
+            <div class="history_content">
+                <p>
+                    The history of whitewater rafting dates back to the early 19th century, when explorers and
+                    adventurers began navigating untamed rivers for transportation and discovery. Early rafts were
+                    handmade and used out of necessity.
+                </p>
+                <img src="images/stamp.jpg" alt="Rafting Stamp" class="history_stamp">
+                <p>
+                    Over the years, rafting evolved into a recreational activity. By the 1960s, commercial rafting
+                    companies began offering guided trips, making it accessible to the public. Today it's a thrilling
+                    experience enjoyed worldwide!
+                </p>
+            </div>
         </section>
-        <section>
+
+        <section class="adventure_section">
             <h2>Adventure Awaits You!</h2>
-            <div class="adventure">
-                <div class="adventure-card">
-                    <img src="images/samp1.jpg" alt="Adventure 1" width="400" height="300">
-                    <span>Adventure 1</span>
-                </div>
-                <div class="adventure-card">
-                    <img src="images/samp2.jpg" alt="Adventure 2" width="400" height="300">
-                    <span>Adventure 2</span>
-                </div>
-                <div class="adventure-card">
-                    <img src="images/samp3.jpg" alt="Adventure 3" width="400" height="300">
-                    <span>Adventure 3</span>
-                </div>
-                <div class="adventure-card">
-                    <img src="images/samp4.jpg" alt="Adventure 4" width="400" height="300">
-                    <span>Adventure 4</span>
-                </div>
-                <div class="adventure-card">
-                    <img src="images/samp5.jpg" alt="Adventure 5" width="400" height="300">
-                    <span>Adventure 5</span>
-                </div>
+            <div class="adventure_gallery">
+                <figure>
+                    <img src="images/samp1.jpg" alt="Los Dientes del Diablo">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/samp2.jpg" alt="Big Mallard">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/samp3.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/samp4.jpg" alt="Wild Canyon Run">
+                    <figcaption>Wild Canyon Run</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/samp5.jpg" alt="Rapid Rush Experience">
+                    <figcaption>Rapid Rush Experience</figcaption>
+                </figure>
             </div>
         </section>
 
     </main>
+
     <footer>
         <p>&copy; 2025 Rafting Travel | Gabriel Landetta | All rights reserved.</p>
         <p>Follow us on social media:</p>
-        <nav class="sociallinks">
+        <nav class="social_links">
             <a href="https://www.facebook.com" target="_blank">
                 <img src="images/fb.png" alt="Facebook">
             </a>
