@@ -196,9 +196,9 @@ main h1 {
 }
 
 main h2 {
-  font-size: 2rem;
   color: var(--accent2-color);
   margin: 1rem 0;
+  font-size: 2.5rem;
 }
 
 main>article {
@@ -235,11 +235,6 @@ main>article p {
   text-align: center;
 }
 
-.history_section h2 {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  margin-bottom: 2rem;
-}
 
 .history_content {
   display: flex;
@@ -308,7 +303,6 @@ main>article p {
 }
 
 .adventure_section h2 {
-  color: var(--primary-color);
   margin-bottom: 1.5rem;
 }
 
@@ -398,4 +392,121 @@ main>article p {
 .social_links a img:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
+}
+.contact_info, .employee_profiles {
+  margin: 3rem auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.contact_info_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;  /* allows stacking on small screens */
+}
+
+.contact_details {
+  flex: 1 1 300px;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.contact_map {
+  flex: 1 1 500px;
+}
+
+.contact_map iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.profile_gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile_gallery figure {
+  width: 200px;
+  height: auto;
+  text-align: center;
+}
+
+.profile_gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact_form {
+  margin: 3rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact_form h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.contact_form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(255,255,255,0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.form_group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form_group label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.form_group input[type="text"],
+.form_group input[type="email"],
+.form_group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form_group input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.form_group textarea {
+    resize: vertical;
+}
+
+.submit_button {
+    align-self: center;
+    padding: 0.8rem 2rem;
+    background-color: var(--accent1-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit_button:hover {
+    background-color: var(--accent2-color);
+    color: white;
 }
