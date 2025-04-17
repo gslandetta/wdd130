@@ -1,8 +1,8 @@
 :root {
   --primary-color: #337CA0;
   --secondary-color: #4B5354;
-  --accent1-color: #FDB813;
-  --accent2-color: #7D6533;
+  --accent1-color: #D48806;
+  --accent2-color: #5A4721;
   --background-color: #f4f4f4;
 }
 
@@ -92,9 +92,10 @@ nav {
 }
 
 .nav_list a:hover {
-  color: var(--accent1-color);
+  color: #D48806; 
   text-decoration: wavy underline;
 }
+
 
 @media (max-width: 768px) {
   header {
@@ -508,6 +509,6 @@ main>article p {
 }
 
 .submit_button:hover {
-    background-color: var(--accent2-color);
-    color: white;
+  background-color: var(--accent2-color);
+  color: #FFF;
 }
