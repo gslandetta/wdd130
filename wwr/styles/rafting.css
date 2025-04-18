@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #337CA0;
-  --secondary-color: #4B5354;
-  --accent1-color: #D48806;
-  --accent2-color: #5A4721;
-  --background-color: #f4f4f4;
+  --primary-color: #003049;
+  --secondary-color: #5E6B6E;
+  --accent1-color: #FFB703;
+  --accent2-color: #8C6E34;
+  --background-color: #F8F9FA;
 }
 
 .bebas_neue {
@@ -48,7 +48,6 @@ h2,
 h3 {
   font-family: "Bebas Neue", sans-serif;
 }
-
 header {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -92,10 +91,9 @@ nav {
 }
 
 .nav_list a:hover {
-  color: #D48806; 
+  color: var(--accent1-color);
   text-decoration: wavy underline;
 }
-
 
 @media (max-width: 768px) {
   header {
@@ -114,10 +112,11 @@ nav {
   }
 }
 
-
-
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
 }
 
 .hero {
@@ -140,13 +139,13 @@ body {
   right: 0;
   font-size: 6rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.616);
+  background-color: rgba(0, 48, 73, 0.7);
   padding: 1rem 2rem;
   border-radius: 10px;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.514);
+  text-shadow: 2px 2px 6px rgba(255, 183, 3, 0.6);
 }
 
 .hero article {
@@ -177,11 +176,10 @@ body {
 }
 
 .hero_article p {
-  color: var(--secondary-color);
+  color: #000000;
   text-align: justify;
   line-height: 1.6;
 }
-
 
 main {
   background-color: var(--background-color);
@@ -202,7 +200,7 @@ main h2 {
   font-size: 2.5rem;
 }
 
-main>article {
+main > article {
   background-color: white;
   border-left: 6px solid var(--accent1-color);
   padding: 1.5rem;
@@ -215,16 +213,16 @@ main>article {
   flex-wrap: wrap;
 }
 
-main>article img {
+main > article img {
   max-width: 300px;
   border-radius: 10px;
 }
 
-main>article p {
+main > article p {
   background-color: var(--accent1-color);
   padding: 1rem;
   border-radius: 8px;
-  color: #333;
+  color: #000000;
   font-weight: 500;
   margin-top: 0.5rem;
   flex: 1;
@@ -236,19 +234,20 @@ main>article p {
   text-align: center;
 }
 
-
 .history_content {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  flex-wrap: wrap; /* So it stacks on smaller screens */
+  flex-wrap: wrap;
 }
 
 .history_content p {
-  flex: 1 1 300px;  /* Allow the paragraphs to shrink and wrap neatly */
+  flex: 1 1 300px;
   text-align: justify;
   line-height: 1.7;
+  color: #000000
+
 }
 
 .history_content img.history_stamp {
@@ -264,38 +263,6 @@ main>article p {
   max-width: 200px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-.history_section {
-  text-align: center;
-  margin: 2rem auto;
-  max-width: 1000px;
-}
-
-.history_section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.history_content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.history_content p {
-  flex: 1 1 300px;
-  text-align: justify;
-}
-
-.history_content img {
-  width: 150px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  
 }
 
 .adventure_section {
@@ -337,7 +304,7 @@ main>article p {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(51, 124, 160, 0.9); /* same as before */
+  background-color: rgba(0, 48, 73, 0.9);
   color: white;
   text-align: center;
   padding: 0.5rem;
@@ -368,6 +335,7 @@ main>article p {
   font-family: "Open Sans", sans-serif;
   position: relative;
 }
+
 .footer_text {
   text-align: center;
 }
@@ -375,6 +343,13 @@ main>article p {
 .footer_text p {
   margin: 0.3rem 0;
   font-size: 1rem;
+}
+
+.footer_text a {
+  color: var(--accent1-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .social_links {
@@ -394,10 +369,13 @@ main>article p {
   transform: scale(1.1);
   filter: brightness(1.2);
 }
+
 .contact_info, .employee_profiles {
   margin: 3rem auto;
   max-width: 1000px;
   text-align: center;
+  color: #000000
+
 }
 
 .contact_info_content {
@@ -405,7 +383,7 @@ main>article p {
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
-  flex-wrap: wrap;  /* allows stacking on small screens */
+  flex-wrap: wrap;
 }
 
 .contact_details {
@@ -413,6 +391,8 @@ main>article p {
   text-align: left;
   line-height: 1.7;
   font-size: 1.1rem;
+  color: #000000
+
 }
 
 .contact_map {
@@ -426,6 +406,7 @@ main>article p {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 .profile_gallery {
   display: flex;
   justify-content: center;
@@ -452,8 +433,9 @@ main>article p {
 }
 
 .contact_form h2 {
-  color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  color: var(--accent2-color);
+  margin: 1rem 0;
+  font-size: 2.5rem;
 }
 
 .contact_form form {
@@ -465,50 +447,55 @@ main>article p {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
 .form_group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  color: #000000
+
 }
 
 .form_group label {
   margin-bottom: 0.3rem;
   font-weight: 600;
   color: var(--secondary-color);
+  color: #000000
+
 }
 
 .form_group input[type="text"],
 .form_group input[type="email"],
 .form_group textarea {
-    width: 100%;
-    padding: 0.7rem;
-    border: 1px solid var(--secondary-color);
-    border-radius: 8px;
-    font-size: 1rem;
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 .form_group input[type="radio"] {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .form_group textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .submit_button {
-    align-self: center;
-    padding: 0.8rem 2rem;
-    background-color: var(--accent1-color);
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  align-self: center;
+  padding: 0.8rem 2rem;
+  background-color: var(--accent1-color);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .submit_button:hover {
   background-color: var(--accent2-color);
-  color: #FFF;
+  color: white;
 }
